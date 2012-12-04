@@ -1,4 +1,7 @@
-/*controllar tipos de argumentos*/
+
+/**
+ *controllar tipos de argumentos
+  */
 
 function sum(a) {
 
@@ -19,3 +22,29 @@ function sum(a) {
 	}
 
 	console.log(sum(a)); //llamar la funcion sum()
+
+
+/**
+ * utilizar propiedades del objeto como argumentos
+ */
+
+function arrayCopy( /*array*/ from, /*index */ fromStart, to, toStart, length ) {
+		console.log('ok'); //incluye aki tu condigo
+	};
+
+	function easyCopy(args){
+		arrayCopy (  
+	   		 args.from,
+			 args.fromStart || 0,
+			 args.to,
+			 args.toStart || 0,
+			 args.length 
+        );
+	};
+
+	var a = [1,2,3,,7,4];
+	var b = new Array(4);
+
+	easyCopy({from:a,to:b, length:4}); //llamar la funcion 
+
+	
