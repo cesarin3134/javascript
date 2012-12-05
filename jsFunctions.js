@@ -80,3 +80,23 @@ function flexisum(b) {
     return total;
 }
 console.log(flexisum(10, 20));
+
+/**
+ *  una funcion se podria asignar a otra varianle y seguir funcionando 
+ */
+
+ function square(x) {return x*x;}
+
+     var a = square(4);
+     console.log(a);
+     b = square;
+     c = b(11);
+     console.log(c);
+
+/**
+ * las funciones no requieren un nombre cuando se asignan a elementos de una matriz
+ */
+     var ar = new Array(3);
+     ar[0] = function(x) {return x*x;}
+     ar[1] = 20;
+     ar[2] = ar[0](ar[1]);
