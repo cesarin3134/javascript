@@ -89,7 +89,7 @@ console.log(flexisum(10, 20));
 
      var a = square(4);
      console.log(a);
-     b = square;
+     b = square; // ahora b hace referencia a la misma funcion que square
      c = b(11);
      console.log(c);
 
@@ -99,4 +99,4 @@ console.log(flexisum(10, 20));
      var ar = new Array(3);
      ar[0] = function(x) {return x*x;}
      ar[1] = 20;
-     ar[2] = ar[0](ar[1]);
+     ar[2] = ar[0](ar[1]); //arr[2] contiene 400 
