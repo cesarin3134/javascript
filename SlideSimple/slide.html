@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('img:gt(0)').hide();
+
+                var attuale = 1;
+                var totImg = $('img').length;
+                console.log(totImg);
+                var slide = function () {
+
+                    var selettore = '.' + attuale;
+                    var successivo = attuale + 1;
+                    var selettore2 = '.' + successivo;
+
+                    if (attuale < totImg) {
+
+                        $(selettore).fadeOut(500, function () {
+                            $(selettore2).fadeIn(500);
+                            attuale++;
+                           
+                        });
+                    } else {
+
+                        $(selettore).fadeOut(500, function () {
+                            $('.1').fadeIn(500);
+                            attuale = 1;
+                        })
+                    }
+                };
+
+                $('.contenedor img').bind('click', slide);
+
+            });
+        </script>
+    </head>
+    
+    <body>
+        <div class="contenedor">
+            <img src="./1.gif" alt="" class="1">
+            <img src="./2.jpg" alt="" class="2">
+            <img src="./3.jpg" alt="" class="3">
+            <img src="./4.jpg" alt="" class="4">
+        </div>
+    </body>
+
+</html>
