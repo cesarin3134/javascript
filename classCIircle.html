@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+<script type="text/javascript">
+	//constructora
+	function Circle (radius) {
+		//r es una propiedad de instacia definida e inicializada en la constructora
+		this.r = radius;
+	}
+
+	Circle.PI = 3.14159; //es una propiedad de clase, es una propiedad de la funcion constructora
+
+	Circle.prototype.area = function () { //es un metodo de instancia k calcula el area del circulo
+		return Circle.PI * this.r * this.r ; //area = PI * r^2
+	}
+
+	//este es un metodo de clase k devuelve el k tiene un radio mayor
+	Circle.max = function(a,b) {
+
+		if(a.r > b.r) return a;
+		else return b;
+	}
+
+	var c = new Circle(1.0); //creo una nueva instancia del la clase circle
+	c.r = 2.2; //modifico la propiedad r de la instacia
+	console.log(c); // imprime la instanci de la clase Circle con sus propiedades
+
+	var a = c.area(); //llamo el metodo de la instancia area()
+	console.log(a);
+
+	var x = Math.exp(Circle.PI); //utiliza la propiedad de clase PI en nuetro calculo
+	console.log(x);
+
+	var d = new Circle(1.2); // creo una segunda instancia del la clase Circle
+	console.log(d);
+
+	var bigger = Circle.max(c,d);//utilizo el metodo de la clase max()
+	console.log(bigger);
+</script>
+</head>
+<body>
+	
+</body>
+</html>
