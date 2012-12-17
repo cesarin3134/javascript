@@ -1,9 +1,3 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-	<script type="text/javascript">
-
 	//Primer paso definir la funcion contructora 
 	function Complex(real, imaginary) {
 		this.x = real;
@@ -51,10 +45,4 @@
 	Complex.ONE = new Complex(1,0);
 	Complex.I = new Complex(0,1);
 
-	</script>
-	<title></title>
-</head>
-<body>
 	
-</body>
-</html>
