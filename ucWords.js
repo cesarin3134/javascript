@@ -1,5 +1,6 @@
-      var str = 'GPF e GPM';
-  		stringa = str.toLowerCase();
+      var str = 'GPF e GPM',
+
+			stringa = str.toLowerCase();
 			var stringToArray = stringa.split(' ');
 			var arrayOut = [];
 
