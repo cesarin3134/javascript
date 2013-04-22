@@ -15,5 +15,7 @@
 	}
 
 	var phraseOut = arrayOut.join(' ');
+	
+	
 
 	console.log(phraseOut); //Gpf e Gpm
